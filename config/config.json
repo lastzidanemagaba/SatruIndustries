@@ -1,0 +1,41 @@
+{
+    "general": {
+        "name": "JTI-Gate02",
+        "device_tipe": "orangepi pc plus" 
+    },
+
+    "target_reader": {
+        "port": 6000,
+        "ip": "192.168.22.222",
+        "is_udp":false,
+        "timeout": 5
+    },
+
+    "api": {
+        "tipe": "http",
+        "server": "http://192.168.22.121:8000" 
+    },
+
+    "ejabber": {
+        "server": "192.168.22.121",
+        "port": "192.168.22.121",
+        "use_tls" : false,
+        "user": "192.168.22.121", 
+        "pass": "192.168.22.121" 
+    },
+
+    "mqtt": {
+        "server": "broker.emqx.io",
+        "port": 1883,
+        "use_tls" : false,
+        "clientid": "mqtt_gate02", 
+        "user": "", 
+        "pass": "" 
+        
+    },
+
+    "log": {
+        "verbose": true,
+        "dev": true
+    }
+}
