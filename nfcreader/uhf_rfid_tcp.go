@@ -197,8 +197,10 @@ func DoJobs() {
 		} else if config.Rdr_ip != "" {
 			for {
 				//con, err := net.Dial("tcp", rdr_ip+":"+rdr_port)
-				con, err := net.DialTimeout("tcp", config.Rdr_ip+":"+config.Rdr_port, config.Rdr_timeout)\
+				con, err := net.DialTimeout("tcp", config.Rdr_ip+":"+config.Rdr_port, config.Rdr_timeout)
 				//net.TCPConn.SetKeepAlive/net.TCPConn.SetKeepAlivePeriod/net.TCPConn.SetNoDelay
+				//conn.SetKeepAlive(true)
+				//conn.SetKeepAlivePeriod(time.Second * 60)
 
 				if err != nil {
 					log.Println(err)
